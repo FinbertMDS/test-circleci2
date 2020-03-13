@@ -56,12 +56,12 @@ jobs:
       - run:
           name: Test build sh
           command: |
-            sh ./scripts/build.sh
+            sh ./scripts/test.sh
 
       - run:
           name: Test build sh
           command: |
-            sh ./scripts/test.sh
+            sh ./scripts/build.sh
 
       - store_artifacts: 
           path: test-results
