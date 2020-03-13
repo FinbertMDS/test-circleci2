@@ -53,6 +53,16 @@ jobs:
             # Push quietly to prevent showing the token in log
             git push -q https://${GITHUB_PERSONAL_TOKEN}@github.com/FinbertMDS/test-circleci2.git master
 
+      - run:
+          name: Test build sh
+          command: |
+            sh ./scripts/build.sh
+
+      - run:
+          name: Test build sh
+          command: |
+            sh ./scripts/test.sh
+
       - store_artifacts: 
           path: test-results
 
