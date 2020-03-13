@@ -1,1 +1,1 @@
-echo("hello world2121");
+console.log(1234)
