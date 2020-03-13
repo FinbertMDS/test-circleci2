@@ -9,14 +9,10 @@ jobs:
       - checkout # special step to check out source code to working directory 
 
       - run:
-          name: Set GIT_COMMIT_DESC
+          name: Set environment variable GIT_COMMIT_DESC
           command: |
             echo 'export GIT_COMMIT_DESC=$(git log -n 1 ${CIRCLE_SHA1} --pretty=format:%s)' >> $BASH_ENV
             source $BASH_ENV
-
-      - run:
-          name: Echo GIT_COMMIT_DESC
-          command: echo ${GIT_COMMIT_DESC}
 
       - restore_cache: # special step to restore the dependency cache
           # Read about caching dependencies: https://circleci.com/docs/2.0/caching/
@@ -53,7 +49,7 @@ jobs:
             git config credential.helper 'cache --timeout=120'
             git config user.email "ngovanhuy.cntt2@gmail.com"
             git config user.name "Deployment Bot"
-            git commit --allow-empty -m "Trigger deployment"
+            git commit --allow-empty -m ${GIT_COMMIT_DESC}
             # Push quietly to prevent showing the token in log
             git push -q https://${GITHUB_PERSONAL_TOKEN}@github.com/FinbertMDS/test-circleci2.git master
 
