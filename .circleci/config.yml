@@ -4,14 +4,14 @@ jobs:
     docker:
       - image: circleci/node:10.16.3
     environment:
-      GIT_COMMIT_DESC: (git log --format=oneline -n 1 $CIRCLE_SHA1)
+      GIT_COMMIT_DESC: `eval "git show -s --format=%B $CIRCLE_SHA1"`
       PUBLIC_URL: https://finbertmds.github.io/test-circleci2
     steps:
       - checkout # special step to check out source code to working directory 
 
       - run:
           name: Echo GIT_COMMIT_DESC
-          command: echo ${GIT_COMMIT_DESC} && echo ${PUBLIC_URL} # replace with `yarn install` if using yarn
+          command: echo ${GIT_COMMIT_DESC} # replace with `yarn install` if using yarn
 
       - restore_cache: # special step to restore the dependency cache
           # Read about caching dependencies: https://circleci.com/docs/2.0/caching/
