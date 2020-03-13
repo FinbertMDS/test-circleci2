@@ -1,0 +1,11 @@
+{
+  "name": "test-circleci2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/FinbertMDS/test-circleci2",
+  "author": "Finbert <finbert@example.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js"
+  }
+}
