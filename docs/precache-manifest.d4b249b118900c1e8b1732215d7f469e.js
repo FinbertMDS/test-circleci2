@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "7503172fe35f65d201a3ff66e14b578f",
+    "revision": "dc8294d826327e354132f56578064374",
     "url": "https://finbertmds.github.io/test-circleci2/index.html"
   },
   {
-    "revision": "d6f3d056bba750b51e0d",
+    "revision": "ca815a1f002f9a5ade38",
     "url": "https://finbertmds.github.io/test-circleci2/static/css/main.5f361e03.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "https://finbertmds.github.io/test-circleci2/static/js/2.824c7624.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "d6f3d056bba750b51e0d",
-    "url": "https://finbertmds.github.io/test-circleci2/static/js/main.31bb8f54.chunk.js"
+    "revision": "ca815a1f002f9a5ade38",
+    "url": "https://finbertmds.github.io/test-circleci2/static/js/main.acf8b0a6.chunk.js"
   },
   {
     "revision": "46ece5b0f3a911b2a16b",
