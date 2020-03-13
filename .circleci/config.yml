@@ -34,7 +34,7 @@ jobs:
       - run:
           name: Run build
           # Runs jest with "--maxWorkers=2" argument to avoid OOM issues
-          command: npm run build # replace with `yarn test` if using yarn
+          command: PUBLIC_URL=./ && npm run build # replace with `yarn test` if using yarn
 
       - run:
           name: Trigger project deployment
